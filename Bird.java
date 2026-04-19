@@ -1,10 +1,9 @@
-import java.util.*;
 
 public class Bird {
     int id;
     String name;
     String color;
-    int count=0;
+    static int count=0;
 
     public Bird(int id,String name,String color){
         this.id=id;
@@ -26,8 +25,9 @@ public class Bird {
 
             System.out.println("Total Birds = " + Bird.count);
 
-            System.out.println(B1.name);
-            B1.updateName=("Eagle");
+            System.out.println("Name = "+B1.name);
+            B1.updateName("Eagle");
+            System.out.println("Updated Name = "+B1.name);
 
 
         }
