@@ -28,7 +28,7 @@ public class Students {
         student[2] = s3;
 
         for (int i = 0; i < student.length; i++) {
-            System.out.println("Name: " + student[i].name +  "\n Marks \t: " + student[i].marks);
+            System.out.println("Name: " + student[i].name +  "\n Marks : " + student[i].marks);
         }
     }
 }
