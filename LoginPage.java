@@ -24,19 +24,15 @@ public class LoginPage extends JFrame implements ActionListener {
 
     LoginPage() {
 
-        // Frame Title
         setTitle("Login Page");
 
-        // Layout
         setLayout(null);
 
-        // Title
         title = new JLabel("Login Form");
         title.setFont(new Font("Arial", Font.BOLD, 22));
         title.setBounds(130, 20, 200, 30);
         add(title);
 
-        // Username
         userLabel = new JLabel("Username:");
         userLabel.setBounds(50, 80, 100, 30);
         add(userLabel);
@@ -45,7 +41,6 @@ public class LoginPage extends JFrame implements ActionListener {
         userField.setBounds(150, 80, 180, 30);
         add(userField);
 
-        // Password
         passLabel = new JLabel("Password:");
         passLabel.setBounds(50, 140, 100, 30);
         add(passLabel);
@@ -54,25 +49,21 @@ public class LoginPage extends JFrame implements ActionListener {
         passField.setBounds(150, 140, 180, 30);
         add(passField);
 
-        // Show Password
         showPassword = new JCheckBox("Show Password");
         showPassword.setBounds(150, 180, 150, 30);
         showPassword.addActionListener(this);
         add(showPassword);
 
-        // Login Button
         login = new JButton("Login");
         login.setBounds(70, 250, 100, 40);
         login.addActionListener(this);
         add(login);
 
-        // Reset Button
         reset = new JButton("Reset");
         reset.setBounds(220, 250, 100, 40);
         reset.addActionListener(this);
         add(reset);
 
-        // Frame Settings
         setSize(420, 380);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -81,7 +72,6 @@ public class LoginPage extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
-        // Show Password
         if(e.getSource() == showPassword) {
 
             if(showPassword.isSelected()) {
@@ -92,7 +82,6 @@ public class LoginPage extends JFrame implements ActionListener {
             }
         }
 
-        // Login Validation
         if(e.getSource() == login) {
 
             String username = userField.getText();
@@ -110,7 +99,6 @@ public class LoginPage extends JFrame implements ActionListener {
             }
         }
 
-        // Reset Fields
         if(e.getSource() == reset) {
 
             userField.setText("");
